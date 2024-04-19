@@ -6,14 +6,16 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
       <StatusBar style="auto" />
-      <ImageBackground source={require('./assets/fotinhaIniciante.png')} style={styles.blocoIniciante}>
-        <Text style={styles.textIniciante}>Iniciante</Text>
-      </ImageBackground>
-      <View style={styles.blocoIniciante}>
-        <Text style={styles.textIniciante}>Intermediário</Text>
-      </View>
-      <View style={styles.blocoIniciante}>
-        <Text style={styles.textIniciante}>Avançado</Text>
+      <View style={styles.blocos}>
+        <ImageBackground source={require('./assets/iniciante.png')} style={styles.bloco}>
+          <Text style={styles.textIniciante}>Iniciante</Text>
+        </ImageBackground>
+        <ImageBackground source={require('./assets/intermediario.jpg')} style={styles.bloco}>
+          <Text style={styles.textIniciante}>Intermediário</Text>
+        </ImageBackground>
+        <ImageBackground source={require('./assets/avancado.png')} style={styles.bloco}>
+          <Text style={styles.textIniciante}>Avançado</Text>
+        </ImageBackground>
       </View>
     </View>
   );
@@ -29,11 +31,21 @@ const styles = StyleSheet.create({
   titulo: {
     color: '#FFFFFF',
     fontSize: 20,
+    marginBottom: 40,
   },
-  blocoIniciante: {
-  
+  blocos: {
+    gap: 20,
+  },
+  bloco: {
+    width: 300,
+    height: 150,
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 50,
   },  
   textIniciante: {
     color: '#FFFFFF',
+    fontSize: 40,
   }
 });
