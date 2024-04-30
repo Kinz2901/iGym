@@ -13,7 +13,6 @@ export default function Nivel({ navigation }) {
           resizeMode="cover"
           style={styles.bloco}
         >
-          
           <Text style={styles.text}>Iniciante</Text>
         </ImageBackground>
         <ImageBackground
