@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground, Button } from "react-native";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
 export default function Nivel({ navigation }) {
   return (
@@ -7,23 +7,22 @@ export default function Nivel({ navigation }) {
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
-        <Button title="Intermediário" onPress={() => navigation.navigate('divisao')}>
-          <ImageBackground
-            borderRadius={12}
-            source={require("../assets/iniciante.png")}
-            resizeMode="cover"
-            style={styles.bloco}
-          >
-            <Text style={styles.textIniciante}>Intermediário</Text>
-          </ImageBackground>
-        </Button>
+        <ImageBackground
+          borderRadius={12}
+          source={require("../assets/iniciante.png")}
+          resizeMode="cover"
+          style={styles.bloco}
+        >
+          
+          <Text style={styles.text}>Iniciante</Text>
+        </ImageBackground>
         <ImageBackground
           borderRadius={12}
           source={require("../assets/intermediario.jpg")}
           resizeMode="cover"
           style={styles.bloco}
         >
-          <Text style={styles.textIniciante}>Intermediário</Text>
+          <Text style={styles.text}>Intermediário</Text>
         </ImageBackground>
         <ImageBackground
           borderRadius={12}
@@ -31,7 +30,7 @@ export default function Nivel({ navigation }) {
           resizeMode="cover"
           style={styles.bloco}
         >
-          <Text style={styles.textIniciante}>Avançado</Text>
+          <Text style={styles.text}>Avançado</Text>
         </ImageBackground>
       </View>
     </View>
@@ -62,8 +61,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: "#F3F3F3",
   },
-  textIniciante: {
+  text: {
     color: "#FFFFFF",
     fontSize: 40,
   },
+  button: {
+    padding: 100,
+  }
 });
