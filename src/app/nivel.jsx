@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, Button } from "react-native";
 
 export default function Nivel({ navigation }) {
   return (
@@ -7,14 +7,16 @@ export default function Nivel({ navigation }) {
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/iniciante.png")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.textIniciante}>Iniciante</Text>
-        </ImageBackground>
+        <Button title="Intermediário" onPress={() => navigation.navigate('divisao')}>
+          <ImageBackground
+            borderRadius={12}
+            source={require("../assets/iniciante.png")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.textIniciante}>Intermediário</Text>
+          </ImageBackground>
+        </Button>
         <ImageBackground
           borderRadius={12}
           source={require("../assets/intermediario.jpg")}

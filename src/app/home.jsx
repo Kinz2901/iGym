@@ -7,14 +7,12 @@ export default function Home({ navigation }) {
       <StatusBar barStyle="light-content" backgroundColor="#6a51ae" />
       <Text style={{ color: '#fff' }}>Light Screen</Text>
       <Button
-        title="Next screen"
+        title="nivel"
         onPress={() => navigation.navigate('nivel')}
-        color="#fff"
       />
       <Button
-        title="Next screen"
+        title="divisão"
         onPress={() => navigation.navigate('divisao')}
-        color="#fff"
       />
     </View>
   )
