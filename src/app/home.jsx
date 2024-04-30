@@ -1,9 +1,21 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StatusBar, Button, StyleSheet } from "react-native"
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>iGym</Text>
+      <StatusBar barStyle="light-content" backgroundColor="#6a51ae" />
+      <Text style={{ color: '#fff' }}>Light Screen</Text>
+      <Button
+        title="Next screen"
+        onPress={() => navigation.navigate('nivel')}
+        color="#fff"
+      />
+      <Button
+        title="Next screen"
+        onPress={() => navigation.navigate('divisao')}
+        color="#fff"
+      />
     </View>
   )
 }

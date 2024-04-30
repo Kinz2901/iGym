@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
-export default function Nivel() {
+export default function Nivel({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
