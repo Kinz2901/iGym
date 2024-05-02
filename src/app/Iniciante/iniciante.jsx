@@ -9,32 +9,36 @@ export default function Divisao({ navigation }) {
       <Text style={styles.titulo}>Escolha seu treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
-        <Link to="/teste">
+        <Link to="/costaBiceps">
           <ImageBackground
             borderRadius={12}
-            source={require("../assets/costasBiceps.png")}
+            source={require("../../assets/costasBiceps.png")}
             resizeMode="cover"
             style={styles.bloco}
           >
             <Text style={styles.textIniciante}>Costas e bíceps</Text>
           </ImageBackground>
         </Link>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/peitoTriceps.jpg")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.textIniciante}>Peito e tríceps</Text>
-        </ImageBackground>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/pernaOmbro.jpg")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.textIniciante}>Perna e ombro</Text>
-        </ImageBackground>
+        <Link to="/peitoTriceps">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../../assets/peitoTriceps.jpg")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.textIniciante}>Peito e tríceps</Text>
+          </ImageBackground>
+        </Link>
+        <Link to="/pernaOmbro">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../../assets/pernaOmbro.jpg")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.textIniciante}>Perna e ombro</Text>
+          </ImageBackground>
+        </Link>
       </View>
     </View>
   );

@@ -1,3 +1,4 @@
+import { Link } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
@@ -7,14 +8,16 @@ export default function Nivel({ navigation }) {
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/iniciante.png")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.text}>Iniciante</Text>
-        </ImageBackground>
+        <Link to="/iniciante">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../assets/iniciante.png")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.text}>Iniciante</Text>
+          </ImageBackground>
+        </Link>
         <ImageBackground
           borderRadius={12}
           source={require("../assets/intermediario.jpg")}
