@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, ImageBackground } from "react-native";
 export default function Divisao() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Escolha seu nível de treino</Text>
+      <Text style={styles.titulo}>Divisão de treino básica</Text>
+      <Text style={styles.titulo}>Escolha seu treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
         <ImageBackground
