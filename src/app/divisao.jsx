@@ -1,21 +1,24 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { Link } from '@react-navigation/native';
 
-export default function Divisao() {
+export default function Divisao({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Divisão de treino básica</Text>
       <Text style={styles.titulo}>Escolha seu treino</Text>
       <StatusBar style="auto" />
       <View style={styles.blocos}>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/costasBiceps.png")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.textIniciante}>Costas e bíceps</Text>
-        </ImageBackground>
+        <Link to="/teste">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../assets/costasBiceps.png")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.textIniciante}>Costas e bíceps</Text>
+          </ImageBackground>
+        </Link>
         <ImageBackground
           borderRadius={12}
           source={require("../assets/peitoTriceps.jpg")}
