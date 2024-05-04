@@ -5,15 +5,17 @@ import BlocoExercicio from "./Exercício/blocoExercicios";
 export default function CostaBiceps({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>costaBiceps</Text>
-      <View style={styles.blocos}>
-        {listExercicios.map((exercicio) => (
-          <BlocoExercicio
-            key={exercicio.name}
-            name={exercicio.name}
-            image={exercicio.image}
-          />
-        ))}
+      <View style={styles.content}>
+        <Text style={styles.title}>Costas e Bíceps</Text>
+        <View style={styles.blocos}>
+          {listExercicios.map((exercicio) => (
+            <BlocoExercicio
+              key={exercicio.name}
+              name={exercicio.name}
+              image={exercicio.image}
+            />
+          ))}
+        </View>
       </View>
     </View>
   );
@@ -25,6 +27,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#424242",
     alignItems: "center",
     justifyContent: "center",
+  },
+  content: {
+    width: "80%",
+  },
+  title: {
+    fontSize: 20,
+    color: "#FFFFFF",
+    marginBottom: 20,
   },
   blocos: {
     width: "100%",
