@@ -1,9 +1,44 @@
-import { View, Text, } from "react-native"
+import { View, Text, StyleSheet } from "react-native";
+import listExercicios from "../../../../peitoTriceps.json";
+import BlocoExercicio from "./Exercício/blocoExercicios";
 
 export default function PeitoTriceps({ navigation }) {
   return (
-    <View>
-      <Text>peitoTriceps</Text>
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.title}>Peito e Tríceps</Text>
+        <View style={styles.blocos}>
+          {listExercicios.map((exercicio) => (
+            <BlocoExercicio
+              key={exercicio.name}
+              name={exercicio.name}
+              image={exercicio.image}
+            />
+          ))}
+        </View>
+      </View>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#424242",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  content: {
+    width: "80%",
+  },
+  title: {
+    fontSize: 20,
+    color: "#FFFFFF",
+    marginBottom: 20,
+  },
+  blocos: {
+    width: "100%",
+    gap: 20,
+    alignItems: "center"
+  }
+});

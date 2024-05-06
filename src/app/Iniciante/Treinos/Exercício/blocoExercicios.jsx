@@ -1,14 +1,18 @@
 import { View, Text, Image, StyleSheet } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function BlocoExercicio({ image, name }) {
   return (
     <View style={styles.bloco}>
-      <Image
-        style={styles.img}
-        src={image}
-      />
       <View style={styles.blocoName}>
+        <Image style={styles.img} src={image} />
         <Text style={styles.name}>{name}</Text>
+        <AntDesign
+          style={styles.seta}
+          name="right"
+          size={24}
+          color="black"
+        />
       </View>
     </View>
   );
@@ -18,8 +22,6 @@ const styles = StyleSheet.create({
   bloco: {
     backgroundColor: "#FFFFFF",
     flexDirection: "row",
-    alignItems: "center",
-    width: "100%",
     height: 100,
     borderRadius: 12,
   },
@@ -30,11 +32,15 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 12,
   },
   blocoName: {
-    width: 140,
-    margin: "auto",
-    backgroundColor: "#F2F22F",
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   name: {
     textAlign: "center",
+  },
+  seta: {
+    marginRight: 24,
   }
 });
