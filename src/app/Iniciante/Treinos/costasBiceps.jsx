@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../costasBiceps.json";
+import listExercicios from "../../../../Listas de treinos/costasBiceps.json";
 import BlocoExercicio from "./Exercício/blocoExercicios";
 
 export default function CostaBiceps({ navigation }) {

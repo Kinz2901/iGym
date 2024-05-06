@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../peitoTriceps.json";
+import listExercicios from "../../../../Listas de treinos/peitoTriceps.json";
 import BlocoExercicio from "./Exercício/blocoExercicios";
 
 export default function PeitoTriceps({ navigation }) {
