@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { Link } from "@react-navigation/native";
 
 export default function BlocoExercicio({ image, name }) {
   return (
@@ -7,12 +8,14 @@ export default function BlocoExercicio({ image, name }) {
       <View style={styles.blocoName}>
         <Image style={styles.img} src={image} />
         <Text style={styles.name}>{name}</Text>
-        <AntDesign
-          style={styles.seta}
-          name="right"
-          size={24}
-          color="black"
-        />
+        <Link to="/pernaOmbro" style={styles.link}>
+          <AntDesign
+            style={styles.seta}
+            name="right"
+            size={24}
+            color="black"
+          />
+        </Link>
       </View>
     </View>
   );
@@ -39,8 +42,16 @@ const styles = StyleSheet.create({
   },
   name: {
     textAlign: "center",
+    width: 120,
+  },
+  link: {
+    height: "100%",
+    width: 70,
+    display: "flex",
+    textAlign: "center",
+    textAlignVertical: "center",
   },
   seta: {
-    marginRight: 24,
+    
   }
 });
