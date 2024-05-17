@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#424242",
     alignItems: "center",
-    justifyContent: "center",
   },
   content: {
     width: "80%",
@@ -34,6 +33,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#FFFFFF",
+    marginTop: 60,
     marginBottom: 20,
   },
   blocos: {
