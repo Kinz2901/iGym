@@ -4,40 +4,45 @@ import { Link } from "@react-navigation/native";
 import { useState } from "react";
 
 export default function BlocoExercicio({ image, name }) {
+  const [direction, setDirection] = useState("right");
+  const [actived, setActived] = useState(false);
 
-  const [direction , setDirection] = useState("right")
-  const [ actived, setActived ] = useState(false)
 
   const descricao = () => {
     if (actived) {
-      setDirection("right")
+      setDirection("right");
     } else {
-      setDirection("down")
+      setDirection("down");
     }
-    setActived(!actived)
-  }
+    setActived(!actived);
+  };
 
   return (
     <View>
-      <View style={styles.bloco}>
+      <View
+        style={[styles.bloco, actived && styles.active]}>
         <View style={styles.blocoName}>
-          <Image style={styles.img} src={image} />
+          <Image style={[styles.img, actived && styles.active]} src={image} />
           <Text style={styles.name}>{name}</Text>
           <TouchableOpacity style={styles.link} onPress={descricao}>
             <AntDesign
-              style={
-                `${styles.seta} 
-                ${actived && "active"}`
-              }
               name={direction}
               size={24}
               color="black"
-              
             />
           </TouchableOpacity>
         </View>
       </View>
-      {actived && <View style={styles.description}><Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aperiam quibusdam nesciunt. Doloremque accusantium, dicta, ut labore reprehenderit at cum quae laboriosam sapiente dolores, nostrum dolore ducimus rerum sed eos.</Text></View>}
+      {actived && (
+        <View style={styles.description}>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            aperiam quibusdam nesciunt. Doloremque accusantium, dicta, ut labore
+            reprehenderit at cum quae laboriosam sapiente dolores, nostrum
+            dolore ducimus rerum sed eos.
+          </Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -71,13 +76,15 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    borderTopRightRadius: 12,
-    borderBottomRightRadius: 12,
   },
   description: {
     backgroundColor: "#FFFFFF",
     padding: 20,
     borderBottomLeftRadius: 12,
     borderBottomRightRadius: 12,
-  }
+  },
+  active: {
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+  },
 });
