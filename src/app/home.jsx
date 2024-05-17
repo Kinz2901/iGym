@@ -1,4 +1,4 @@
-import { View, Text, StatusBar, Button, StyleSheet } from "react-native"
+import { View, Text, StatusBar, StyleSheet } from "react-native"
 import { Link } from '@react-navigation/native';
 
 export default function Home({ navigation }) {
@@ -6,15 +6,8 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>iGym</Text>
       <StatusBar barStyle="light-content" backgroundColor="#6a51ae" />
-      <Text style={{ color: '#fff' }}>Light Screen</Text>
-      <Link to='/divisao'>
-        divisão
-      </Link>
-      <Link to='/nivel'>
-        nivel
-      </Link>
-      <Link to='/teste'>
-        teste
+      <Link to='/nivel' style={styles.button}>
+        Começe já!
       </Link>
     </View>
   )
@@ -31,5 +24,13 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     color: "#ffffff",
+  },
+  button: {
+    backgroundColor: "#FFFFFF",
+    margin: 10,
+    padding: 10,
+    borderRadius: 5, 
+    fontWeight: "bold",
+    color: "#424242",
   }
 })
