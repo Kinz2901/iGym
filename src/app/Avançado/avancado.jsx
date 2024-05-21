@@ -1,11 +1,17 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
-import { Link } from '@react-navigation/native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  ScrollView,
+} from "react-native";
+import { Link } from "@react-navigation/native";
 
 export default function Divisao({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Text style={styles.titulo}>Divisão de treino avançado</Text>
         <Text style={styles.titulo2}>Escolha seu treino</Text>
         <StatusBar style="auto" />
@@ -50,28 +56,28 @@ export default function Divisao({ navigation }) {
               <Text style={styles.textAv}>Ombros</Text>
             </ImageBackground>
           </Link>
-          <Link to="/QuadricepsAv">
+          <Link to="/quadricepsAv">
             <ImageBackground
               borderRadius={12}
-              source={require("../../assets/treino-de-ombro.jpg")}
+              source={require("../../assets/quadriceps.jpg")}
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Ombros</Text>
+              <Text style={styles.textAv}>Quadríceps</Text>
             </ImageBackground>
           </Link>
-          <Link to="/PosteriorAv">
+          <Link to="/posteriorAv">
             <ImageBackground
               borderRadius={12}
-              source={require("../../assets/treino-de-ombro.jpg")}
+              source={require("../../assets/posterior.jpg")}
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Ombros</Text>
+              <Text style={styles.textAv}>Posterior de coxa</Text>
             </ImageBackground>
           </Link>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -80,7 +86,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#424242",
-    alignItems: "center",
+    margin: "auto",
+    alignItems: "center"
   },
   titulo: {
     color: "#FFFFFF",
@@ -95,6 +102,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: "80%",
+    marginBottom: 60,
   },
   blocos: {
     gap: 20,

@@ -1,16 +1,16 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from "react-native";
 import { Link } from '@react-navigation/native';
 
 export default function Divisao({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Text style={styles.titulo}>Divisão de treino básica</Text>
         <Text style={styles.titulo2}>Escolha seu treino</Text>
         <StatusBar style="auto" />
         <View style={styles.blocos}>
-          <Link to="/costaBicepsInt">
+          <Link to="/costaBicepsIni">
             <ImageBackground
               borderRadius={12}
               source={require("../../assets/costasBiceps.png")}
@@ -20,7 +20,7 @@ export default function Divisao({ navigation }) {
               <Text style={styles.textIniciante}>Costas e bíceps</Text>
             </ImageBackground>
           </Link>
-          <Link to="/peitoTricepsInt">
+          <Link to="/peitoTricepsIni">
             <ImageBackground
               borderRadius={12}
               source={require("../../assets/peitoTriceps.jpg")}
@@ -30,7 +30,7 @@ export default function Divisao({ navigation }) {
               <Text style={styles.textIniciante}>Peito e tríceps</Text>
             </ImageBackground>
           </Link>
-          <Link to="/pernaOmbroInt">
+          <Link to="/pernaOmbroIni">
             <ImageBackground
               borderRadius={12}
               source={require("../../assets/pernaOmbro.jpg")}
@@ -41,7 +41,7 @@ export default function Divisao({ navigation }) {
             </ImageBackground>
           </Link>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: "80%",
+    marginBottom: 60
   },
   blocos: {
     gap: 20,

@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import listExercicios from "../../../../Listas de treinos avançado/peito.json";
 import BlocoExercicio from "../../Exercício/blocoExercicios";
 
 export default function PeitoAv({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Text style={styles.title}>Pernas</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
@@ -18,7 +18,7 @@ export default function PeitoAv({ navigation }) {
             />
           ))}
         </View>
-      </View>
+      </ScrollView>
     </View>
   )
 }

@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from "react-native";
 import { Link } from '@react-navigation/native';
 
 export default function Divisao({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Text style={styles.titulo}>Divisão de treino intermediária</Text>
         <Text style={styles.titulo2}>Escolha seu treino</Text>
         <StatusBar style="auto" />
@@ -37,7 +37,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIntermediario}>Pernas e ombros</Text>
+              <Text style={styles.textIntermediario}>Pernas</Text>
             </ImageBackground>
           </Link>
           <Link to="/ombroInt">
@@ -51,7 +51,7 @@ export default function Divisao({ navigation }) {
             </ImageBackground>
           </Link>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: "80%",
+    marginBottom: 60,
   },
   blocos: {
     gap: 20,

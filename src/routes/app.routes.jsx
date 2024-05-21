@@ -41,7 +41,7 @@ export default function AppRoutes() {
       <Screen name="costasAv" component={CostasAv} />
       <Screen name="peitoAv" component={PeitoAv} />
       <Screen name="bicepsTricepsAv" component={BicepsTricepsAv} />
-      <Screen name="ombroAv" component={OmbrosAv} />
+      <Screen name="ombrosAv" component={OmbrosAv} />
       <Screen name="quadricepsAv" component={QuadricepsAv} />
       <Screen name="posteriorAv" component={PosteriorAv} />
     </Navigator>
