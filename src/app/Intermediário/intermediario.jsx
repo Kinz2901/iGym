@@ -6,7 +6,7 @@ export default function Divisao({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.titulo}>Divisão de treino básica</Text>
+        <Text style={styles.titulo}>Divisão de treino intermediária</Text>
         <Text style={styles.titulo2}>Escolha seu treino</Text>
         <StatusBar style="auto" />
         <View style={styles.blocos}>
@@ -17,7 +17,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIniciante}>Costas e bíceps</Text>
+              <Text style={styles.textIntermediario}>Costas e bíceps</Text>
             </ImageBackground>
           </Link>
           <Link to="/peitoTricepsInt">
@@ -27,7 +27,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIniciante}>Peito e tríceps</Text>
+              <Text style={styles.textIntermediario}>Peito e tríceps</Text>
             </ImageBackground>
           </Link>
           <Link to="/pernaOmbroInt">
@@ -37,7 +37,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIniciante}>Perna e ombro</Text>
+              <Text style={styles.textIntermediario}>Perna e ombro</Text>
             </ImageBackground>
           </Link>
         </View>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 12,
   },
-  textIniciante: {
+  textIntermediario: {
     color: "#FFFFFF",
     fontSize: 26,
   },

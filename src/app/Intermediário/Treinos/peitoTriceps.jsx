@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../Listas de treinos iniciante/costasBicepsIni.json";
+import listExercicios from "../../../../Listas de treinos intermediário/peitoTricepsInt.json";
 import BlocoExercicio from "../../Exercício/blocoExercicios";
 
-export default function CostaBicepsIni({ navigation }) {
+export default function PeitoTricepsInt({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Costas e Bíceps</Text>
+        <Text style={styles.title}>Peito e Tríceps</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
   blocos: {
     width: "100%",
     gap: 20,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });

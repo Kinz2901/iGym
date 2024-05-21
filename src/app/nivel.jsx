@@ -18,14 +18,16 @@ export default function Nivel({ navigation }) {
             <Text style={styles.text}>Iniciante</Text>
           </ImageBackground>
         </Link>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/intermediario.jpg")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.text}>Intermediário</Text>
-        </ImageBackground>
+        <Link to="/intermediario">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../assets/intermediario.jpg")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.text}>Intermediário</Text>
+          </ImageBackground>
+        </Link>
         <ImageBackground
           borderRadius={12}
           source={require("../assets/avancado.png")}

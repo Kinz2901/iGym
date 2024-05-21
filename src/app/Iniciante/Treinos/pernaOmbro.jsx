@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
 import listExercicios from "../../../../Listas de treinos iniciante/pernaOmbroIni.json";
-import BlocoExercicio from "./Exercício/blocoExercicios";
+import BlocoExercicio from "../../Exercício/blocoExercicios";
 
-export default function PernaOmbro({ navigation }) {
+export default function PernaOmbroIni({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>

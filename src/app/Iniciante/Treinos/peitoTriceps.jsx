@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
 import listExercicios from "../../../../Listas de treinos iniciante/peitoTricepsIni.json";
-import BlocoExercicio from "./Exercício/blocoExercicios";
+import BlocoExercicio from "../../Exercício/blocoExercicios";
 
-export default function PeitoTriceps({ navigation }) {
+export default function PeitoTricepsIni({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -13,14 +13,14 @@ export default function PeitoTriceps({ navigation }) {
               key={exercicio.name}
               name={exercicio.name}
               image={exercicio.image}
-              series= {exercicio.series}
+              series={exercicio.series}
               descricao={exercicio.descricao}
             />
           ))}
         </View>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
   blocos: {
     width: "100%",
     gap: 20,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
