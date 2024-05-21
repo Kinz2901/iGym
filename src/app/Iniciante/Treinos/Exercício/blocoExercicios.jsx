@@ -1,14 +1,12 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import { Link } from "@react-navigation/native";
 import { useState } from "react";
 
-export default function BlocoExercicio({ image, name }) {
+export default function BlocoExercicio({ image, name, series, descricao }) {
   const [direction, setDirection] = useState("right");
   const [actived, setActived] = useState(false);
 
-
-  const descricao = () => {
+  const text = () => {
     if (actived) {
       setDirection("right");
     } else {
@@ -19,27 +17,23 @@ export default function BlocoExercicio({ image, name }) {
 
   return (
     <View>
-      <View
-        style={[styles.bloco, actived && styles.active]}>
+      <View style={[styles.bloco, actived && styles.active]}>
         <View style={styles.blocoName}>
           <Image style={[styles.img, actived && styles.active]} src={image} />
           <Text style={styles.name}>{name}</Text>
-          <TouchableOpacity style={styles.link} onPress={descricao}>
-            <AntDesign
-              name={direction}
-              size={24}
-              color="black"
-            />
+          <TouchableOpacity style={styles.link} onPress={text}>
+            <AntDesign name={direction} size={24} color="black" />
           </TouchableOpacity>
         </View>
       </View>
       {actived && (
         <View style={styles.description}>
+          <Text style={styles.series}>{series}</Text>
+          <Text style={{ fontWeight: "bold", }}>
+            Como fazer:  
+          </Text>
           <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            aperiam quibusdam nesciunt. Doloremque accusantium, dicta, ut labore
-            reprehenderit at cum quae laboriosam sapiente dolores, nostrum
-            dolore ducimus rerum sed eos.
+            {descricao}
           </Text>
         </View>
       )}
@@ -76,6 +70,10 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  series: {
+    fontWeight: "bold",
+    marginBottom: 10,
   },
   description: {
     backgroundColor: "#FFFFFF",

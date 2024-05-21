@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../Listas de treinos/peitoTriceps.json";
+import listExercicios from "../../../../Listas de treinos iniciante/peitoTricepsIni.json";
 import BlocoExercicio from "./Exercício/blocoExercicios";
 
 export default function PeitoTriceps({ navigation }) {
@@ -13,6 +13,8 @@ export default function PeitoTriceps({ navigation }) {
               key={exercicio.name}
               name={exercicio.name}
               image={exercicio.image}
+              series= {exercicio.series}
+              descricao={exercicio.descricao}
             />
           ))}
         </View>
@@ -26,7 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#424242",
     alignItems: "center",
-    justifyContent: "center",
   },
   content: {
     width: "80%",
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#FFFFFF",
+    marginTop: 60,
     marginBottom: 20,
   },
   blocos: {
