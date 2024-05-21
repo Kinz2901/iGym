@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../Listas de treinos avançado/pernaInt.json";
+import listExercicios from "../../../../Listas de treinos avançado/quadriceps.json";
 import BlocoExercicio from "../../Exercício/blocoExercicios";
 
 export default function QuadricepsAv({ navigation }) {

@@ -28,14 +28,16 @@ export default function Nivel({ navigation }) {
             <Text style={styles.text}>Intermediário</Text>
           </ImageBackground>
         </Link>
-        <ImageBackground
-          borderRadius={12}
-          source={require("../assets/avancado.png")}
-          resizeMode="cover"
-          style={styles.bloco}
-        >
-          <Text style={styles.text}>Avançado</Text>
-        </ImageBackground>
+        <Link to="/avancado">
+          <ImageBackground
+            borderRadius={12}
+            source={require("../assets/avancado.png")}
+            resizeMode="cover"
+            style={styles.bloco}
+          >
+            <Text style={styles.text}>Avançado</Text>
+          </ImageBackground>
+        </Link>
       </View>
     </View>
   );

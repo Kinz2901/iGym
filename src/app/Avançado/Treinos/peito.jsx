@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../Listas de treinos avançado/pernaInt.json";
+import listExercicios from "../../../../Listas de treinos avançado/peito.json";
 import BlocoExercicio from "../../Exercício/blocoExercicios";
 
-export default function PernaInt({ navigation }) {
+export default function PeitoAv({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
