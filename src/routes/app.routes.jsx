@@ -10,7 +10,8 @@ import CostaBicepsInt from "../app/Intermediário/Treinos/costasBiceps";
 import PeitoTricepsIni from "../app/Iniciante/Treinos/peitoTriceps";
 import PeitoTricepsInt from "../app/Intermediário/Treinos/peitoTriceps";
 import PernaOmbroIni from "../app/Iniciante/Treinos/pernaOmbro";
-import PernaOmbroInt from "../app/Intermediário/Treinos/pernaOmbro";
+import PernaInt from "../app/Intermediário/Treinos/pernas";
+import OmbroInt from "../app/Intermediário/Treinos/ombros";
 
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -28,7 +29,8 @@ export default function AppRoutes() {
       <Screen name="pernaOmbroIni" component={PernaOmbroIni} />
       <Screen name="costaBicepsInt" component={CostaBicepsInt} />
       <Screen name="peitoTricepsInt" component={PeitoTricepsInt} />
-      <Screen name="pernaOmbroInt" component={PernaOmbroInt} />
+      <Screen name="pernaInt" component={PernaInt} />
+      <Screen name="ombroInt" component={OmbroInt} />
     </Navigator>
   );
 }

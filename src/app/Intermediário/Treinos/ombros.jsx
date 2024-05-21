@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
-import listExercicios from "../../../../Listas de treinos iniciante/pernaOmbroIni.json";
+import listExercicios from "../../../../Listas de treinos intermediário/OmbroInt.json";
 import BlocoExercicio from "../../Exercício/blocoExercicios";
 
-export default function PernaOmbroIni({ navigation }) {
+export default function OmbroInt({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Pernas e Ombros</Text>
+        <Text style={styles.title}>Ombros</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio
@@ -20,7 +20,7 @@ export default function PernaOmbroIni({ navigation }) {
         </View>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({

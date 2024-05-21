@@ -30,7 +30,7 @@ export default function Divisao({ navigation }) {
               <Text style={styles.textIntermediario}>Peito e tríceps</Text>
             </ImageBackground>
           </Link>
-          <Link to="/pernaOmbroInt">
+          <Link to="/pernaInt">
             <ImageBackground
               borderRadius={12}
               source={require("../../assets/pernaOmbro.jpg")}
@@ -38,6 +38,16 @@ export default function Divisao({ navigation }) {
               style={styles.bloco}
             >
               <Text style={styles.textIntermediario}>Perna e ombro</Text>
+            </ImageBackground>
+          </Link>
+          <Link to="/ombroInt">
+            <ImageBackground
+              borderRadius={12}
+              source={require("../../assets/pernaOmbro.jpg")}
+              resizeMode="cover"
+              style={styles.bloco}
+            >
+              <Text style={styles.textIntermediario}>Ombro</Text>
             </ImageBackground>
           </Link>
         </View>
@@ -54,7 +64,7 @@ const styles = StyleSheet.create({
   },
   titulo: {
     color: "#FFFFFF",
-    fontSize: 26,
+    fontSize: 20,
     marginTop: 60,
     marginBottom: 20,
   },
