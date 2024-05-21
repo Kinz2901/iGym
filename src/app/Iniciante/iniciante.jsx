@@ -37,7 +37,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIniciante}>Perna e ombro</Text>
+              <Text style={styles.textIniciante}>Pernas e ombros</Text>
             </ImageBackground>
           </Link>
         </View>

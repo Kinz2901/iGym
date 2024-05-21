@@ -37,17 +37,17 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIntermediario}>Perna e ombro</Text>
+              <Text style={styles.textIntermediario}>Pernas e ombros</Text>
             </ImageBackground>
           </Link>
           <Link to="/ombroInt">
             <ImageBackground
               borderRadius={12}
-              source={require("../../assets/pernaOmbro.jpg")}
+              source={require("../../assets/treino-de-ombro.jpg")}
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textIntermediario}>Ombro</Text>
+              <Text style={styles.textIntermediario}>Ombros</Text>
             </ImageBackground>
           </Link>
         </View>
