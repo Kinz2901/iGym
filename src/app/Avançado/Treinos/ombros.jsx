@@ -6,7 +6,7 @@ export default function OmbrosAv({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Pernas</Text>
+        <Text style={styles.title}>Ombros</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio

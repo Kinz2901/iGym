@@ -6,7 +6,7 @@ export default function BicepsTricepsAv({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Pernas</Text>
+        <Text style={styles.title}>Biceps e tríceps</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio

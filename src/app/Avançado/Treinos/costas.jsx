@@ -6,7 +6,7 @@ export default function CostasAv({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Pernas</Text>
+        <Text style={styles.title}>Costas</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio

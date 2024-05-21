@@ -17,7 +17,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Costas e bíceps</Text>
+              <Text style={styles.textAv}>Costas</Text>
             </ImageBackground>
           </Link>
           <Link to="/peitoAv">
@@ -27,17 +27,17 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Peito e tríceps</Text>
+              <Text style={styles.textAv}>Peito</Text>
             </ImageBackground>
           </Link>
           <Link to="/bicepsTricepsAv">
             <ImageBackground
               borderRadius={12}
-              source={require("../../assets/pernaOmbro.jpg")}
+              source={require("../../assets/triceps.png")}
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Pernas e ombros</Text>
+              <Text style={styles.textAv}>Biceps e Tríceps</Text>
             </ImageBackground>
           </Link>
           <Link to="/ombrosAv">
