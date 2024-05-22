@@ -6,7 +6,7 @@ export default function QuadricepsAv({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.content}>
-        <Text style={styles.title}>Quadríceps</Text>
+        <Text style={styles.title}>Quadríceps e Panturrilha</Text>
         <View style={styles.blocos}>
           {listExercicios.map((exercicio) => (
             <BlocoExercicio

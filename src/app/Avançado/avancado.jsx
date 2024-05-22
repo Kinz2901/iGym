@@ -63,7 +63,7 @@ export default function Divisao({ navigation }) {
               resizeMode="cover"
               style={styles.bloco}
             >
-              <Text style={styles.textAv}>Quadríceps</Text>
+              <Text style={styles.textAv}>Quadríceps e Panturrilhas</Text>
             </ImageBackground>
           </Link>
           <Link to="/posteriorAv">
@@ -74,6 +74,7 @@ export default function Divisao({ navigation }) {
               style={styles.bloco}
             >
               <Text style={styles.textAv}>Posterior de coxa</Text>
+              <Text style={styles.textAv}>e Glúteo</Text>
             </ImageBackground>
           </Link>
         </View>
