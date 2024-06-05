@@ -1,8 +1,43 @@
 import { Link } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import * as SQLite from 'expo-sqlite';
+
+function openDatabase() {
+  const db = SQLite.openDatabase("igym-database.db");
+  return db;
+}
+
+const db = openDatabase();
+
+function saveExercise() {
+  alert("Exercício salvo!")
+}
+
+function deleteExercise() {
+  alert("Exercício excluído!")
+}
 
 export default function Nivel({ navigation }) {
+db.transaction((tx) => {
+  tx.executeSql(
+    "SELECT Name, Image, Series, Description from Exercises", 
+    [],
+    (tx, results) => {
+      var len = results.rows.length;
+      if (len > 0) {
+        console.log('Name: ' + results.rows.item(0).Name)
+        console.log('Image: ' + results.rows.item(0).Image)
+        console.log('Series: ' + results.rows.item(0).Series)
+        console.log('Description: ' + results.rows.item(0).Description)
+      }
+      else {
+        console.log('sem exercício')
+      }
+    }, 
+  )
+})
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Escolha seu nível de treino</Text>
