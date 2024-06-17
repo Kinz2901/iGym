@@ -1,49 +1,7 @@
 import { View, Text, StatusBar, StyleSheet, Image } from "react-native";
 import { Link } from "@react-navigation/native";
-import * as SQLite from 'expo-sqlite';
-
-function openDatabase() {
-  const db = SQLite.openDatabase("igym-database.db");
-  return db;
-}
-
-const db = openDatabase();
-
-const getExercideName = () => {
-  return "EXERCISE";
-}
 
 export default function Home({ navigation }) {
-  db.transaction((tx) => {
-    tx.executeSql(
-      "create table if not exists Exercises  (Name TEXT primary key, Image TEXT, Series TEXT, Description TEXT"
-    )
-  })
-
-  var hasName = false;
-  db.transaction((tx) => {
-    tx.executeSql(
-      "SELECT Name from Exercises",
-      [],
-      (tx, results) => {
-        var len = results.rows.length;
-        if (len > 0) {
-          console.log("existe um exercicio adicionado")
-          hasName = true;
-        }
-        else{
-          console.log('sem exercicio');
-        }
-      }
-    )
-  })
-  if(hasName == false) {
-    db.transaction((tx) => {
-      tx.executeSql("insert into Exercises (Name, Image, Series, Description) values (?, ?, ?, ?);", ['exercise', 'exerciseImg', '4 de 12 - 15', 'desc'])
-    })
-  }
-
-
   return (
     <View style={styles.container}>
       <Image
